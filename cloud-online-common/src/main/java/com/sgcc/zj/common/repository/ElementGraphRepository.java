@@ -1,4 +1,3 @@
-/*
 package com.sgcc.zj.common.repository;
 
 import com.sgcc.zj.common.domain.ElementNode;
@@ -9,16 +8,14 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
 
-*/
 /**
- * @description: 元素接口
+ * @description: 关系接口
  * @author: liyingjie
- * @create: 2019-01-10
- *//*
-
+ * @create: 2019-01-15
+ */
 @Repository
-public interface ElementNodeRepository extends Neo4jRepository<ElementNode,Long> {
-    @Query("MATCH (m:ElementNode)<-[r:belong_to]-(a:ElementNode) RETURN m,r,a LIMIT {limit}")
+public interface ElementGraphRepository extends Neo4jRepository<ElementNode,Long> {
+
+    @Query("MATCH (f:ElementNode)-[e:BELONG_TO]-(t:ElementNode) RETURN f,e,t LIMIT {limit}")
     Collection<ElementNode> graph(@Param("limit") int limit);
 }
-*/

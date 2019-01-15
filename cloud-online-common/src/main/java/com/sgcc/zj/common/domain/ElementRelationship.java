@@ -1,14 +1,14 @@
-/*
+
 package com.sgcc.zj.common.domain;
 
 import org.neo4j.ogm.annotation.*;
 
-*/
+
 /**
  * @description: 元素关系
  * @author: liyingjie
  * @create: 2019-01-10
- *//*
+ */
 
 @RelationshipEntity("BELONG_TO")
 public class ElementRelationship {
@@ -58,4 +58,4 @@ public class ElementRelationship {
                 '}';
     }
 }
-*/
+
