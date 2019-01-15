@@ -7,8 +7,6 @@ import java.util.Map;
  * 代码生成器
  * 
  * @author admin
- * @email admin@rsitf.com
- * @date 2016年12月19日 下午3:33:38
  */
 public interface SysGeneratorService {
 	

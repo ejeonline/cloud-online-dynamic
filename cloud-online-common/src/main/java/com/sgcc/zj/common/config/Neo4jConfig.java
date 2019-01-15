@@ -8,7 +8,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.neo4j.transaction.Neo4jTransactionManager;
 
 /**
- * @description: 配置文件
+ * @description: neo4j配置文件
  * @author: liyingjie
  * @create: 2019-01-11
  */

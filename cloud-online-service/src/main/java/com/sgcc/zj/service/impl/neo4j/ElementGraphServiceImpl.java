@@ -66,10 +66,9 @@ public class ElementGraphServiceImpl implements ElementGraphService {
         return result;
     }
 
-
-
     @Override
     public Iterable<ElementNode> findAll() {
         return elementGraphRepository.findAll();
-    }}
+    }
+}
 

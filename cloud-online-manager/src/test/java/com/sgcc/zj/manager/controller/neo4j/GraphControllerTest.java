@@ -20,15 +20,13 @@ public class GraphControllerTest extends CloudOnlineManagerApplicationTests {
     @Test
     public void mytest(){
 
-        int limit = 100;
-        Map<String, Object> elements = elementGraphService.elementNodeGraph(limit);
-        ElementNode node = new ElementNode();
+        Map<String, Object> elements = elementGraphService.elementNodeGraph(100);
+        System.out.println(elements.toString());
+
+        /*ElementNode node = new ElementNode();
         node.setElementName("test");
         node.setElementType("testssss");
+        elementGraphService.save(node);*/
 
-        elementGraphService.save(node);
-        Iterable<ElementNode> all = elementGraphService.findAll();
-        System.out.println(all.toString());
-        System.out.println(elements.toString());
     }
 }

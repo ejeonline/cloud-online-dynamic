@@ -10,8 +10,6 @@ import java.util.Map;
 /**
  * XSS过滤处理
  * @author admin
- * @email admin@rsitf.com
- * @date 2017-04-01 11:29
  */
 public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {
     //没被包装过的HttpServletRequest（特殊场景，需求自己过滤）

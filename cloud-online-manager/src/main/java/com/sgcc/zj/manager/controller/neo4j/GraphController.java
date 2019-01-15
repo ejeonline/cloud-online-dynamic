@@ -25,8 +25,16 @@ public class GraphController {
     @Resource
     private ElementGraphService elementGraphService;
 
-    @RequestMapping("/queryGraphAll")
-    public R queryGraphAll(){
+    @GetMapping("/graph")
+    public R graph(@RequestParam(value = "limit",required = false) Integer limit) {
+        Map<String, Object> elements = elementGraphService.elementNodeGraph(limit == null ? 100 : limit);
+        return R.ok().put("elements",elements);
+    }
+
+
+
+    /*@RequestMapping("/insertTest")
+    public R insertTest(){
 
         ElementNode node1 = new ElementNode();
         node1.setElementName("ecs1");
@@ -42,19 +50,13 @@ public class GraphController {
         System.out.println("node2"+savenode2.toString());
         ElementRelationship comRelation = new ElementRelationship(node2,node1);
 
-        /*ElementRelationship elementSave = elementRelationshipRepository.save(comRelation);
+        *//*ElementRelationship elementSave = elementRelationshipRepository.save(comRelation);
         System.out.println("关系"+elementSave.toString());
         ElementNode elementNode = elementGraphService.elementNodeSave(node1);
         System.out.println("elementNode"+elementNode.toString());
-        Iterable<ElementNode> all = elementNodeRepository.findAll();*/
+        Iterable<ElementNode> all = elementNodeRepository.findAll();*//*
 
         return R.ok().put("all","");
-    }
-
-    @GetMapping("/graph")
-    public R graph(@RequestParam(value = "limit",required = false) Integer limit) {
-        Map<String, Object> elements = elementGraphService.elementNodeGraph(limit == null ? 100 : limit);
-        return R.ok().put("elements",elements);
-    }
+    }*/
 
 }
