@@ -41,18 +41,18 @@
                 },
                 "text-valign": 'center',
                 "width": function (a) {
-                    return "project" == a.data('type') ? 60 : 45
+                    return "PROJECT" == a.data('type') ? 60 : 45
                 },
                 "height": function (a) {
-                    return "project" == a.data('type') ? 60 : 45
+                    return "PROJECT" == a.data('type') ? 60 : 45
                 },
                 "background-color": function (a) {
-                    return !a.data('target') ? '#47D2AC' : "project" == a.data('type') ?
+                    return !a.data('target') ? '#47D2AC' : "PROJECT" == a.data('type') ?
                         '#2196F4' : '#EAA829'
                 },
                 "color": '#fff',
                 "border-color": function (a) {
-                    return !a.data('target') ? '#47D2AC' : "project" == a.data('type') ?
+                    return !a.data('target') ? '#47D2AC' : "PROJECT" == a.data('type') ?
                         '#2196F4' : '#EAA829'
                 },
                 "border-width": 1,
@@ -66,11 +66,11 @@
                 "z-index-compare": "manual",
                 "z-index": 20,
                 "padding": function (a) {
-                    return "ecs" == a.data("type") ? 3 : 0
+                    return "ECS" == a.data("type") ? 3 : 0
                 },
                 "text-max-width": 60,
                 "text-margin-y": function (a) {
-                    return "ecs" == a.data("type") ? 4 : 2
+                    return "ECS" == a.data("type") ? 4 : 2
                 },
                 "label": function (a) {
                     a = a.data("id");
